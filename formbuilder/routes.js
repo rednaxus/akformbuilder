@@ -8,6 +8,7 @@ import JsonViewContainer from "./containers/builder/JsonViewContainer";
 import NotificationContainer from "./containers/NotificationContainer";
 import FormCreatedContainer from "./containers/FormCreatedContainer";
 import UserFormContainer from "./containers/UserFormContainer";
+import UserForm2Container from "./containers/UserForm2Container";
 import RecordCreatedContainer from "./containers/RecordCreatedContainer";
 import AdminViewContainer from "./containers/AdminViewContainer";
 import WelcomeContainer from "./containers/WelcomeContainer";
@@ -87,6 +88,10 @@ export default (
         components={{...common, sidebarComponent: Check, content: RecordCreatedContainer}} />
       <Route path="form/:id"
         components={{...common, mainComponent: UserFormContainer}} />
+      <Route path="form2/data-sent"
+        components={{...common, sidebarComponent: Check, content: RecordCreatedContainer}} />
+      <Route path="form2/:id"
+        components={{...common, mainComponent: UserForm2Container}} />
       <Route path="admin/:adminToken"
         components={{...common, sidebarComponent: null, header: null, content: AdminViewContainer}} />
       <Route path="*" components={{
